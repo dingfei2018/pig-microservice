@@ -19,6 +19,8 @@ package com.pig4cloud.pig.admin.api.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
@@ -41,7 +43,8 @@ public class SysLog implements Serializable {
 	/**
 	 * 编号
 	 */
-	@TableId(value = "id", type = IdType.AUTO)
+	@TableId(value = "id", type = IdType.ID_WORKER)
+	@JsonSerialize(using = ToStringSerializer.class)
 	private Long id;
 	/**
 	 * 日志类型
