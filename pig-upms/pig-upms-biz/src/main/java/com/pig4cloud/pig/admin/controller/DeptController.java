@@ -19,6 +19,7 @@ import com.pig4cloud.pig.admin.api.entity.SysDept;
 import com.pig4cloud.pig.admin.service.SysDeptService;
 import com.pig4cloud.pig.common.core.util.R;
 import com.pig4cloud.pig.common.log.annotation.SysLog;
+import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -34,6 +35,7 @@ import java.time.LocalDateTime;
  * @author lengleng
  * @since 2019/2/1
  */
+@Api("部门接口")
 @RestController
 @AllArgsConstructor
 @RequestMapping("/dept")

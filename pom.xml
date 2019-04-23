@@ -42,6 +42,7 @@
 		<security.oauth.version>2.3.5.RELEASE</security.oauth.version>
 		<security.oauth.auto.version>2.1.2.RELEASE</security.oauth.auto.version>
 		<jackson.modules>2.9.8</jackson.modules>
+		<swagger.version>2.9.2</swagger.version>
 		<!--zipkin2.12.x需要此版本jooq-->
 		<jooq.version>3.11.9</jooq.version>
 		<zipkin.version>2.12.2</zipkin.version>
@@ -103,6 +104,16 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${swagger.version}</version>
 		</dependency>
 	</dependencies>
 

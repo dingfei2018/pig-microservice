@@ -1,11 +1,21 @@
 server:
   port: 9999
-
 spring:
   application:
     name: pig-gateway
   # 配置中心
   cloud:
+    gateway:
+      locator:
+        enabled: true
+      routes:
+        - id: pig-upms
+          uri: lb://pig-upms
+          predicates:
+            - Path=/pig-upms/**
+          filters:
+            - SwaggerHeaderFilter
+            - StripPrefix=1
     config:
       fail-fast: true
       name: ${spring.application.name}
@@ -17,6 +27,7 @@ spring:
     active: dev
   main:
     allow-bean-definition-overriding: true
+    s
 
 # 注册中心
 eureka:

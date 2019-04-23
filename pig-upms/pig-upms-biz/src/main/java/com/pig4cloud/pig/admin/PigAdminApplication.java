@@ -21,6 +21,7 @@ import com.pig4cloud.pig.common.security.annotation.EnablePigFeignClients;
 import com.pig4cloud.pig.common.security.annotation.EnablePigResourceServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @author lengleng
@@ -29,6 +30,7 @@ import org.springframework.cloud.client.SpringCloudApplication;
  */
 @EnablePigResourceServer
 @EnablePigFeignClients
+@EnableSwagger2
 @SpringCloudApplication
 public class PigAdminApplication {
 	public static void main(String[] args) {
