@@ -20,6 +20,7 @@ import com.pig4cloud.pig.admin.service.SysDeptService;
 import com.pig4cloud.pig.common.core.util.R;
 import com.pig4cloud.pig.common.log.annotation.SysLog;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -35,7 +36,7 @@ import java.time.LocalDateTime;
  * @author lengleng
  * @since 2019/2/1
  */
-@Api("部门接口")
+@Api(value = "/dept", tags="部门管理")
 @RestController
 @AllArgsConstructor
 @RequestMapping("/dept")
@@ -48,6 +49,7 @@ public class DeptController {
 	 * @param id ID
 	 * @return SysDept
 	 */
+	@ApiOperation(value = "通过ID查询", notes = "通过ID查询部门信息")
 	@GetMapping("/{id}")
 	public R getById(@PathVariable Integer id) {
 		return new R<>(sysDeptService.getById(id));
