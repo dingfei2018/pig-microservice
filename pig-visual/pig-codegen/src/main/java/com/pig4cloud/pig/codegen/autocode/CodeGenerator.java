@@ -16,7 +16,7 @@ import java.util.Scanner;
 // 演示例子，执行 main 方法控制台输入模块表名回车自动生成对应项目目录中
 public class CodeGenerator {
 
-    public static  final  String  projectPath="C:\\generator-output\\gci_test";
+   /* public static  final  String  projectPath="C:\\generator-output\\gci_test";
 
     public static void main(String[] args) throws Exception {
         // 代码生成器
@@ -71,7 +71,7 @@ public class CodeGenerator {
                         + "/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
             }
         });
-        /*
+        *//*
         cfg.setFileCreate(new IFileCreate() {
             @Override
             public boolean isCreate(ConfigBuilder configBuilder, FileType fileType, String filePath) {
@@ -80,7 +80,7 @@ public class CodeGenerator {
                 return false;
             }
         });
-        */
+        *//*
         cfg.setFileOutConfigList(focList);
         mpg.setCfg(cfg);
 
@@ -115,11 +115,11 @@ public class CodeGenerator {
         Runtime.getRuntime().exec("explorer "+projectPath);
     }
 
-    /**
+    *//**
      * <p>
      * 读取控制台内容
      * </p>
-     */
+     *//*
     public static String scanner(String tip) {
         Scanner scanner = new Scanner(System.in);
         StringBuilder help = new StringBuilder();
@@ -132,5 +132,5 @@ public class CodeGenerator {
             }
         }
         throw new MybatisPlusException("请输入正确的" + tip + "！");
-    }
+    }*/
 }
