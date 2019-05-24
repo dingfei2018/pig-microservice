@@ -43,6 +43,8 @@
 		<security.oauth.auto.version>2.1.2.RELEASE</security.oauth.auto.version>
 		<jackson.modules>2.9.8</jackson.modules>
 		<swagger.version>2.9.2</swagger.version>
+		<mybatis-spring-boot-starter.version>1.3.4</mybatis-spring-boot-starter.version>
+		<quartz.version>2.3.1</quartz.version>
 		<!--zipkin2.12.x需要此版本jooq-->
 		<jooq.version>3.11.9</jooq.version>
 		<zipkin.version>2.12.2</zipkin.version>
@@ -125,6 +127,7 @@
 		<module>pig-upms</module>
 		<module>pig-common</module>
 		<module>pig-visual</module>
+		<module>pig-job-admin</module>
 	</modules>
 
 	<dependencyManagement>
